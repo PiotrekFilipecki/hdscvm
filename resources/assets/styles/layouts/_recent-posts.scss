@@ -1,0 +1,28 @@
+.recent-wrapper,
+.works {
+  .works-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    .video {
+      width: 30%;
+      position: relative;
+
+      // a {
+      //   z-index: 0;
+      // }
+
+      // img {
+      //   position: absolute;
+      //   left: 0;
+      //   top: 0;
+      //   z-index: -1;
+      // }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+// TODO: .banner .nav li {}
+// TODO: .banner .nav a {}
+
+.banner {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2em auto;
+    width: 80%;
+
+    .nav {
+      list-style-type: none;
+      display: flex;
+
+      li {
+        text-transform: uppercase;
+        margin: 0 0.25vw;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          position: relative;
+          display: inline-block;
+          z-index: 1;
+
+          &::before,
+          &::after {
+            content: attr(title);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+          }
+
+          &::before {
+            color: #0ff;
+            z-index: -1;
+          }
+
+          &::after {
+            color: #f0f;
+            z-index: -2;
+          }
+
+          &:hover {
+            &::before {
+              animation: glitchy 0.3s ease 0.3s infinite;
+            }
+
+            &::after {
+              animation: glitchy 0.3s ease infinite reverse;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes glitchy {
+  0% { transform: translate(-2px, 2px); }
+  25% { transform: translate(-2px, -2px); }
+  50% { transform: translate(2px, 2px); }
+  75% { transform: translate(2px, -2px); }
+  100% { transform: translate(-2px, 2px); }
+}
+
+// .text-link a{
+//   position: relative;
+//   display: inline-block;
+//   font-size: 45px;
+//   text-decoration: none;
+//   color: #fff;
+//   z-index: 1;
+
+//   &::before,
+//   &::after {
+//     content: attr(data-content);
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//   }
+
+//   &::before {
+//     color: #0ff;
+//     z-index: -1;
+//   }
+
+//   &::after {
+//     color: #f0f;
+//     z-index: -2;
+//   }
+
+//   &:hover {
+//     &::before {
+//       animation: glitchy 0.3s ease 0.3s infinite;
+//     }
+
+//     &::after {
+//       animation: glitchy 0.3s ease infinite reverse;
+//     }
+//   }
+// }
